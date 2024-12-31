@@ -1,0 +1,25 @@
+{% extends "home/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Book Form</h4>
+            </div>
+            <div class="card-body">
+                <form method = 'POST'>
+                    {% csrf_token %}
+                   {{form.as_p}}
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    {% endblock content %}
+
+
+    <!-- name publication,author,is_published, -->
